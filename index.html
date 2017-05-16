@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = en>
+<head>
+	<meta charset = "UTF-8">
+	<Title>Chrystal Collector</Title>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link type="text/css" src="assets/css/style.css">
+</head>
+
+<body>
+
+<p id="instructions">You will be given a random number of chrystals at the start of the game</p>
+<p id="totalText">Your target score is:</p>
+<p id="winsText">Wins:</p>
+<p id="winsNumber"></p>
+<p id="losesText">Loses:</p>
+<p id="losesNumber"></p>
+<p id="chrystalsText">Chrystals:</p>
+<button id="button-1"></button>
+<button id="button-2"></button>
+<button id="button-3"></button>
+<button id="button-4"></button>
+
+<p id="totalScoreText">Your total score is:</p>
+<p id="totalScoreNumber"></p>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+var chrystalValue = Math.floor(Math.random() * 12)
+
+	$("#button-1").on("click", function() {
+		$("totalScoreNumber").append($(this).attr(chrystalValue))
+	});
+
+
+</script>
