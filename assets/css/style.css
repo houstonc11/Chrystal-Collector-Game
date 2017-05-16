@@ -1,0 +1,62 @@
+body {
+	width: 100%;
+	margin: 0;
+		
+}
+
+.masterContainer {
+	background: url("../images/crystalbackground.jpg");
+	background-repeat: no-repeat;
+    max-width: 1440px;
+    width: auto;
+    margin: 0 auto;
+    height: 1200px;
+}
+
+.gemBox {
+text-align: center;
+}
+
+.btn-default {
+	height: 100px;
+	width: 100px;
+}
+
+.containerMain {
+	padding: 0 20px;
+}
+
+
+
+.crystal {
+	height: 90px;
+	width: 90px;
+
+	padding-right: 15px;
+	padding-bottom: 5px;
+}
+
+@font-face{
+	font-family: crystal;
+	src: url("../fonts/crystal.ttf");
+}
+@font-face{
+	font-family: jungle;
+	src: url("../fonts/jungle.ttf");	
+}
+
+.title {
+	font-family: crystal;
+	height: 70px;
+	font-size: 50px;
+	margin: 0 20px;
+}
+
+p {
+	font-family: jungle;
+}
+
+
+.panel.panel-primary {
+    background-color: rgba(245, 245, 245, .75);
+}

@@ -1,38 +1,103 @@
 <!DOCTYPE html>
-<html lang = en>
+<html lang=e n>
+
 <head>
-	<meta charset = "UTF-8">
-	<Title>Chrystal Collector</Title>
-	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<link type="text/css" src="assets/css/style.css">
+    <meta charset="UTF-8">
+    <Title>Chrystal Collector</Title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 
 <body>
-
-<p id="instructions">You will be given a random number of chrystals at the start of the game</p>
-<p id="totalText">Your target score is:</p>
-<p id="winsText">Wins:</p>
-<p id="winsNumber"></p>
-<p id="losesText">Loses:</p>
-<p id="losesNumber"></p>
-<p id="chrystalsText">Chrystals:</p>
-<button id="button-1"></button>
-<button id="button-2"></button>
-<button id="button-3"></button>
-<button id="button-4"></button>
-
-<p id="totalScoreText">Your total score is:</p>
-<p id="totalScoreNumber"></p>
-
-<script type="text/javascript">
-
-$(document).ready(function(){
-var chrystalValue = Math.floor(Math.random() * 12)
-
-	$("#button-1").on("click", function() {
-		$("totalScoreNumber").append($(this).attr(chrystalValue))
-	});
-
-
+    <div class="masterContainer">
+        <div class="titleContainer">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title">
+                        <div class="titleText">Crystal Collector</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containerMain">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="panel panel-primary panel-transparent">
+                        <div class="panel-body">
+                            <div class="col-md-12">
+                                <div class="hudBox">
+                                    <p class="instructions">You will be given a "target number" at the start of the game. By clicking on the crystals below, you will add a specific amount of points to your total score.
+                                    <p class="instructions">You win the game by matching your total score to the target score. You lose if your total score goes above the target score.
+                                    <p class="instructions">The value of each crystal is hidden until you click on it. Each time the game starts, the game will change the values of each crystal. Good Luck!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-primary panel-transparent gemBox">
+                        <div class="panel-body">
+                            <div class="col-md-12">
+                                <div class="hudBox">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <button class="btn btn-default btn-transparent" id="button-1">
+                                                <img class="crystal" src="assets/images/crystal1.jpg">
+                                            <button class="btn btn-default btn-transparent" id="button-2">
+                                                <img class="crystal" src="assets/images/crystal2.jpg">
+                                            <button class="btn btn-default btn-transparent" id="button-3">
+                                                <img class="crystal" src="assets/images/crystal3.jpg">
+                                            <button class="btn btn-default btn-transparent" id="button-4">
+                                                <img class="crystal" src="assets/images/crystal4.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="containerScores">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="panel-box">
+                            <div class="panel panel-primary panel-transparent">
+                                <div class="panel-body">
+                                    <p id="targetText">Your target score is:</p>
+                                    <p id="targetNumber"></p>
+                                    <p id="totalScoreText">Your total score is:</p>
+                                    <p id="totalScoreNumber"></p>
+                                    <p id="winsText">Wins:</p>
+                                    <p id="winsNumber"></p>
+                                    <p id="losesText">Loses:</p>
+                                    <p id="losesNumber"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- <p id="targetText">Your target score is:</p>
+            <p id="targetNumber"></p> -->
+<!-- <p id="winsText">Wins:</p>
+            <p id="winsNumber"></p>
+            <p id="losesText">Loses:</p>
+            <p id="losesNumber"></p>
+            <p id="chrystalsText">Chrystals:</p> -->
+<!-- <button id="button-1"></button>
+            <button id="button-2"></button>
+            <button id="button-3"></button>
+            <button id="button-4"></button> -->
+<!-- <p id="totalScoreText">Your total score is:</p>
+            <p id="totalScoreNumber"></p> -->
+<script type="text/javascript" src="assets/javascript/game.js" </script>
+< script src = "https://code.jquery.com/jquery-3.1.1.min.js" >
 </script>
+
+</html>
