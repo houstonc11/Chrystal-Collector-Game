@@ -1,7 +1,6 @@
 body {
 	width: 100%;
-	margin: 0;
-		
+	margin: 0;		
 }
 
 .masterContainer {
@@ -9,8 +8,7 @@ body {
 	background-repeat: no-repeat;
     max-width: 1440px;
     width: auto;
-    margin: 0 auto;
-    height: 1200px;
+    margin: 0 auto;   
 }
 
 .gemBox {
@@ -31,7 +29,6 @@ text-align: center;
 .crystal {
 	height: 90px;
 	width: 90px;
-
 	padding-right: 15px;
 	padding-bottom: 5px;
 }

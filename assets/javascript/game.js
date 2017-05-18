@@ -2,8 +2,8 @@ $(document).ready(function() {
         var startAudio = new Audio("assets/sounds/jungle.mp3")
         var winAudio = new Audio("assets/sounds/winningsound.mp3")
         var loseAudio = new Audio ("assets/sounds/losingsound.mp3")
-        winsNumber = 0
-        losesNumber = 0
+        var winsNumber = 0
+        var losesNumber = 0
         startAudio.play();
 
         startGame();
@@ -84,8 +84,7 @@ $(document).ready(function() {
                     $('#button-4').unbind("click");
                     setTimeout(function(){ startGame() }, 2500);
 
-                } else if (totalScoreNumber > targetScoreNumber) {
-                    
+                } else if (totalScoreNumber > targetScoreNumber) {                    
                     $("#winnerText").text("YOU LOSE!");
                     loseAudio.play();
                     losesNumber++;
