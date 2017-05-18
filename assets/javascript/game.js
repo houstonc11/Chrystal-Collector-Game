@@ -1,8 +1,10 @@
 $(document).ready(function() {
-
+        var startAudio = new Audio("assets/sounds/jungle.mp3")
+        var winAudio = new Audio("assets/sounds/winningsound.mp3")
+        var loseAudio = new Audio ("assets/sounds/losingsound.mp3")
         winsNumber = 0
         losesNumber = 0
-
+        startAudio.play();
 
         startGame();
 
@@ -16,6 +18,7 @@ $(document).ready(function() {
             var min = Math.ceil(19)
             var max = Math.floor(120)
             var targetScoreNumber = Math.floor(Math.random() * (max - min)) + min;
+            $("#winnerText").text("");
 
             $("#totalScoreNumber").text(totalScoreNumber);
 
@@ -72,21 +75,26 @@ $(document).ready(function() {
 
             function winCheck() {
                 if (totalScoreNumber == targetScoreNumber) {
-                    alert("YOU WIN");
+                    $("#winnerText").text("YOU WIN!");
+                    winAudio.play();
                     winsNumber++;
                     $('#button-1').unbind("click");
                     $('#button-2').unbind("click");
                     $('#button-3').unbind("click");
                     $('#button-4').unbind("click");
-                    startGame();
+                    setTimeout(function(){ startGame() }, 2500);
+
                 } else if (totalScoreNumber > targetScoreNumber) {
-                    alert("YOU LOSE");
+                    
+                    $("#winnerText").text("YOU LOSE!");
+                    loseAudio.play();
                     losesNumber++;
                     $("#button-1").unbind("click");
                     $("#button-2").unbind("click");
                     $("#button-3").unbind("click");
                     $("#button-4").unbind("click");
-                    startGame();
+                    setTimeout(function(){ startGame() }, 2500);
+
                 }
             }
         }

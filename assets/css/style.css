@@ -52,11 +52,16 @@ text-align: center;
 	margin: 0 20px;
 }
 
+#targetNumber,
+#totalScoreNumber {
+	font-size: 22px;
+}
+
 p {
 	font-family: jungle;
 }
 
 
 .panel.panel-primary {
-    background-color: rgba(245, 245, 245, .75);
+    background-color: rgba(245, 245, 245, .60);
 }
